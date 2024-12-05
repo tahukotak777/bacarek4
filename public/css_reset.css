@@ -1,0 +1,261 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture,
+svg,
+video,
+canvas {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  font-style: italic;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+    transition: none;
+  }
+}
+
+body,
+html {
+  width: 100vw;
+  scroll-behavior: smooth;
+  overflow-x: hidden; /* Hindari scroll horizontal */
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+  --dark-blue: rgba(29, 40, 48, 1);
+  --blue: rgba(27, 158, 222, 1);
+  --gray: rgba(78, 90, 101, 1);
+  --red:rgba(222, 27, 27, 1);
+  --font-primary: "Inter", sans-serif;
+  --font-size-larger: 32px;
+  --font-size-large: 22px;
+  --font-size-small: 17px;
+  --font-size-smaller: 15px;
+  --font-size-smallllerrrr: 12px;
+}
+@media (min-width: 960px) and (max-width: 1023px) {
+  :root {
+    --dark-blue: rgba(29, 40, 48, 1);
+    --blue: rgba(27, 158, 222, 1);
+    --gray: rgba(78, 90, 101, 1);
+    --font-primary: "Inter", sans-serif;
+    --font-size-larger: 22px;
+    --font-size-large: 17px;
+    --font-size-small: 15px;
+    --font-size-smaller: 14px;
+    --font-size-smallllerrrr: 12px;
+  }
+}
+
+@media (min-width: 1500px) {
+  :root {
+    --dark-blue: rgba(29, 40, 48, 1);
+    --blue: rgba(27, 158, 222, 1);
+    --gray: rgba(78, 90, 101, 1);
+    --font-primary: "Inter", sans-serif;
+    --font-size-larger: 40px;
+    --font-size-large: 30px;
+    --font-size-small: 27px;
+    --font-size-smaller: 25px;
+    --font-size-smallllerrrr: 20px;
+  }
+}
+
+@media (min-width: 1800px) {
+  :root {
+    --dark-blue: rgba(29, 40, 48, 1);
+    --blue: rgba(27, 158, 222, 1);
+    --gray: rgba(78, 90, 101, 1);
+    --font-primary: "Inter", sans-serif;
+    --font-size-larger: 45px;
+    --font-size-large: 40px;
+    --font-size-small: 35px;
+    --font-size-smaller: 30px;
+    --font-size-smallllerrrr: 25px;
+  }
+}
+p {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-small);
+}
+h1 {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-large);
+  color: black;
+  text-decoration: none;
+}
+#subjudul {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-small);
+}
+#subjudul-sidebar {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-large);
+  width: 70%;
+}
+#number-sidebar {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-large);
+}
+#tanggal {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-smallllerrrr);
+}
+a {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-small);
+  text-decoration: none;
+}
+#button {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-smallllerrrr);
+  font-weight: bold;
+  background-color: rgba(27, 158, 222, 1);
+  text-align: center;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  padding: 10px;
+}
+#button1 {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-smallllerrrr);
+  font-weight: bold;
+  background-color: var(--red);
+  text-align: center;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  padding: 10px;
+}
+button{
+  font-family: var(--font-primary)
+  var(--font-size-smallllerrrr);
+  border-radius: 7px;
+  padding: 10px;
+}
+label {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-smaller);
+}
+.title {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-larger);
+}
+
+#overlay {
+  position: fixed; /* Agar overlay berada di atas semua elemen */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Warna hitam dengan opasitas 50% */
+  display: none; /* Sembunyikan overlay secara default */
+  z-index: 5; /* Pastikan overlay berada di atas konten lainnya */
+}
+
+
+/*editan farel*/
+.error {
+  color: var(--red);
+}
+.success {
+  color: green
+}
+#buttonA{
+  font-family: var(--font-primary);
+  font-size: var(--font-size-smallllerrrr);
+  font-weight: bold;
+  background-color: rgba(27, 158, 222, 1);
+  text-align: center;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  padding: 10px;
+  text-decoration: none;
+}
+
+#buttonA1 {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-smallllerrrr);
+  font-weight: bold;
+  background-color: var(--red);
+  text-align: center;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  padding: 10px;
+  text-decoration: none;
+}
+
+form.searchBar {
+  width: 30%;
+  height: 30px;
+}
+
+form.searchBar input {
+  width: 88%;
+}
+
+.kosong-kategori {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: larger;
+  color: var(--red);
+}
+
+.desc {
+  text-overflow: hidden;
+  height: 30px;
+}

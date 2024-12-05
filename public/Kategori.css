@@ -1,0 +1,343 @@
+header {
+  width: 100%;
+}
+
+.header-atas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1%;
+  margin: 0% 3% 0 3% ;
+  background-color: white;
+  box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+  position: relative;
+  margin: 0 auto;
+  transform: translateX(0);
+  left: 1%;
+}
+
+.picture-container {
+  display: flex;
+  align-items: center;
+}
+
+.profile-picture {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Default navigasi di bawah header */
+.navigasi-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 1%;
+  background-image: url(/assets/Background.png);
+  position: static; /* Default: tidak fixed */
+  width: 100%;
+  transition: none;
+  border-bottom: 1px solid black;
+}
+
+.sidebar-profile-picture {
+  display: none;
+}
+
+.navigasi-container a {
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.navigasi-container input {
+  width: 20%;
+}
+.navigasi-sidebar-container {
+  display: none;
+}
+/* --------------------------------------------------------- */
+/* Styling untuk main  */
+main {
+  width: 100vw;
+  padding: 3%;
+}
+#title-theme {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+.title {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-larger);
+  padding: 1% 0;
+  margin: 0 1%;
+}
+.setup-container {
+  display: flex;
+  width: 100%;
+}
+#main-container {
+  padding: 1%;
+  width: 60%;
+}
+#main-container div {
+  margin-bottom: 1%;
+}
+.content img {
+  width: 100%;
+}
+#sidebar-container {
+  width: 40%;
+}
+#sidebar-container section {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
+  margin: 3%;
+  gap: 10px;
+}
+#bottombar-container {
+  display: flex;
+  /* justify-content: space-evenly; */
+  overflow: hidden;
+  gap: 20px;
+}
+#bottombar-container section {
+  width: 19%;
+}
+#bottombar-container img {
+  margin-bottom: 5%;
+  border-radius: 10px;
+}
+#bottombar-container h1,
+p {
+  width: 100%;
+  margin-bottom: 2%;
+}
+
+/* ---------------------  ---------------------------------- */
+/* Styling untuk Footer */
+footer {
+  width: 100%;
+  padding: 5% 0;
+  background-color: var(--dark-blue);
+}
+
+footer h1,
+footer p {
+  color: white;
+}
+
+.logo-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-text img {
+  width: 40%;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; /* Agar elemen bisa berbaris ke bawah jika sempit */
+}
+
+.connection-container {
+  width: 30%;
+}
+
+.connection-container p {
+  font-size: smaller;
+  text-align: center;
+}
+
+.connection-container div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5%;
+}
+
+.connection-container a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15%;
+}
+
+.connection-container a img {
+  width: 50%;
+}
+
+.connection-container h1 {
+  font-size: 120%;
+}
+
+.information-container {
+  width: 50%;
+}
+
+.information-container div {
+  margin-bottom: 2%;
+}
+
+.information-container h1 {
+  font-size: larger;
+}
+/* Responsive Styling */
+@media (max-width: 960px) {
+  :root {
+    --dark-blue: rgba(29, 40, 48, 1);
+    --blue: rgba(27, 158, 222, 1);
+    --gray: rgba(78, 90, 101, 1);
+    --font-primary: "Inter", sans-serif;
+    --font-size-larger: 20px;
+    --font-size-large: 15px;
+    --font-size-small: 15px;
+    --font-size-smaller: 14px;
+    --font-size-smallllerrrr: 10px;
+  }
+  .logo {
+    position: relative;
+    margin: 0;
+    transform: translateX(0);
+  }
+  .menu-toggle {
+    display: block; /* Tampilkan tombol menu */
+  }
+
+  .profile-picture {
+    display: none; /* Sembunyikan profile picture di header */
+  }
+  .navigasi-container {
+    display: none;
+  }
+  .navigasi-sidebar-container {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: -100%; /* Sidebar tersembunyi di awal */
+    height: 500px;
+    width: 250px;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: right 0.3s ease; /* Animasi muncul/menutup */
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    z-index: 10;
+  }
+
+  .navigasi-sidebar-container a {
+    color: rgb(0, 0, 0);
+    padding: 5px 0;
+    text-align: left;
+  }
+
+  .navigasi-sidebar-container input {
+    margin: 15px 0;
+    width: 90%;
+    padding: 8px;
+  }
+
+  .sidebar-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .sidebar-profile-picture {
+    display: block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+
+  /* Sidebar terlihat */
+  .navigasi-sidebar-container.open {
+    right: 0;
+  }
+  .profile-name {
+    font-weight: bold;
+  }
+
+  /* --------------------------main container----------------------- */
+  #subjudul-sidebar {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-large);
+    width: 100%;
+  }
+  #setup-container {
+    display: flex;
+    flex-direction: column;
+  }
+  #main-container {
+    padding: 1%;
+    width: 100%;
+  }
+
+  #sidebar-container {
+    margin: 1%;
+    width: 100%;
+  }
+
+  .setup-container {
+    display: flex;
+    flex-direction: column;
+  }
+  #bottombar-container {
+    display: flex;
+    flex-direction: column;
+  }
+  #bottombar-container section {
+    display: flex;
+    width: 100%;
+  }
+  #bottombar-container img {
+    width: 40%;
+    height: 40%;
+    margin-bottom: 5%;
+    border-radius: 10px;
+  }
+  #bottombar-container div {
+    width: 60%;
+    padding-left: 2%;
+  }
+
+  /* --------------------- footer container------------------------------- */
+  .footer-container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .connection-container {
+    width: 90%;
+    margin-bottom: 5%;
+  }
+  .information-container {
+    width: 90%;
+    margin-bottom: 10%;
+  }
+  .connection-container img {
+    width: 100px;
+  }
+  .connection-container a {
+    width: 50px;
+  }
+}

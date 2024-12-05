@@ -1,0 +1,171 @@
+
+/* --------------------------------------------------- */
+header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid black;
+  padding: 1%;
+}
+header img{
+  margin: 1%;
+}
+/* -------------------------------------------------- */
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 120px); /* Kurangi tinggi header dan footer */
+  padding: 20px;
+}
+
+.title-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.title-container h1 {
+  margin-bottom: 10px;
+}
+
+.title-container p {
+  font-size: 14px;
+  color: #555;
+}
+
+.title-container p a {
+  font-size: medium;
+  color: #3498db;
+  text-decoration: none;
+}
+
+.title-container p a:hover {
+  text-decoration: underline;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Jarak antar elemen form */
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.form-container input,
+.form-container select,
+.form-container button {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.form-container button {
+  background: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.form-container button:hover {
+  background: #2980b9;
+}
+
+footer p {
+  font-size: 14px;
+}
+
+/* ---------------------------------------------- */
+/* Styling untuk Footer */
+footer {
+  width: 100%;
+  padding: 5% 0;
+  background-color: var(--dark-blue);
+}
+
+footer h1,
+footer p {
+  color: white;
+}
+
+.logo-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-text img {
+  width: 40%;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; /* Agar elemen bisa berbaris ke bawah jika sempit */
+}
+
+.connection-container {
+  width: 30%;
+}
+
+.connection-container p {
+  font-size: var(--font-size-small);
+  text-align: center;
+}
+
+.connection-container div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5%;
+}
+
+.connection-container a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+}
+.connection-container h1 {
+  font-size: 120%;
+}
+
+.information-container {
+  width: 50%;
+}
+
+.information-container div {
+  margin-bottom: 2%;
+}
+
+.information-container h1 {
+  font-size: larger;
+}
+@media (max-width: 960px) {
+  /* ---------------------------------------------------- */
+  .footer-container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .connection-container {
+    width: 90%;
+    margin-bottom: 5%;
+  }
+  .information-container {
+    width: 90%;
+    margin-bottom: 10%;
+  }
+  .connection-container img {
+    width: 100px;
+  }
+  .connection-container a {
+    width: 50px;
+  }
+}

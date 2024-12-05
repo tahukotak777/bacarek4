@@ -1,0 +1,257 @@
+header {
+  width: 100%;
+}
+
+.header-atas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1%;
+  margin: 0% 3% 0 3%;
+  background-color: white;
+  box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid black;
+}
+
+.logo {
+  position: relative;
+  margin: 0 auto;
+  transform: translateX(0);
+  left: 1%;
+}
+
+.picture-container {
+  display: flex;
+  align-items: center;
+}
+
+.profile-picture {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+/* --------------------Styling untuk Main------------------ */
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  /* height: 100vh; */
+  padding: 5% 10%;
+}
+main div {
+  margin-bottom: 1%;
+}
+#input-small {
+  width: 100%;
+  height: 2rem;
+}
+#input-large {
+  width: 100%;
+  height: 5rem;
+}
+/* Styling for file input container */
+.file-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 5rem;
+  border: 1px solid #000000;
+  border-radius: 2px;
+  background-color: #ffffff;
+}
+
+/* Centered text inside the container */
+.file-input-label {
+  font-size: 16px;
+  color: #888;
+  pointer-events: none; /* Makes sure the label text is not clickable */
+}
+
+/* Hidden file input placed over the container */
+.file-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer; /* Changes cursor to indicate it's clickable */
+}
+main input,
+select,
+textarea,
+.file-input-wrapper,
+.upload {
+  margin-bottom: 4%;
+}
+.upload {
+  width: 20%;
+  height: 2rem;
+  font-family: var(--font-primary);
+  font-size: var(--font-size-smallllerrrr);
+  font-weight: bold;
+  background-color: rgba(27, 158, 222, 1);
+  text-align: center;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  padding: 10px;
+}
+.upload1 {
+  width: 20%;
+  height: 2rem;
+  font-family: var(--font-primary);
+  font-size: var(--font-size-smallllerrrr);
+  font-weight: bold;
+  background-color: var(--red);
+  text-align: center;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  padding: 10px;
+}
+.hidden {
+  display: none;
+}
+.profileee {
+  display: flex;
+  justify-content: center;
+}
+.profile-pic-wrapper {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.profile-pic-wrapper .edit-icon {
+  position: absolute;
+  bottom: 5px;
+  right: 1px;
+}
+.profile-pic-wrapper #profilePic {
+  width: 100px;
+  height: 100px;
+}
+.edit-icon {
+  width: 30px;
+}
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+/* --------------------- Styling untuk Footer --------------------- */
+footer {
+  width: 100%;
+  padding: 5% 0;
+  background-color: var(--dark-blue);
+}
+
+footer h1,
+footer p {
+  color: white;
+}
+
+.logo-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-text img {
+  width: 40%;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; /* Agar elemen bisa berbaris ke bawah jika sempit */
+}
+
+.connection-container {
+  width: 30%;
+}
+
+.connection-container p {
+  font-size: var(--font-size-small);
+  text-align: center;
+}
+
+.connection-container div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5%;
+}
+
+.connection-container h1 {
+  font-size: 120%;
+}
+
+.information-container {
+  width: 50%;
+}
+
+.information-container div {
+  margin-bottom: 2%;
+}
+
+.information-container h1 {
+  font-size: larger;
+}
+@media (max-width: 960px) {
+  :root {
+    --dark-blue: rgba(29, 40, 48, 1);
+    --blue: rgba(27, 158, 222, 1);
+    --gray: rgba(78, 90, 101, 1);
+    --font-primary: "Inter", sans-serif;
+    --font-size-larger: 15px;
+    --font-size-large: 12px;
+    --font-size-small: 10px;
+    --font-size-smaller: 14px;
+    --font-size-smallllerrrr: 10px;
+  }
+  .logo{
+    margin: 0;
+  }
+
+  /* -----------------------main container------------------- */
+  #subjudul-sidebar {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-large);
+    width: 100%;
+  }
+  #setup-container {
+    display: flex;
+    flex-direction: column;
+  }
+  #main-container {
+    padding: 1%;
+    width: 100%;
+  }
+
+  #sidebar-container {
+    margin: 1%;
+    width: 100%;
+  }
+  /* ---------------------------------------------------- */
+  .footer-container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .connection-container {
+    width: 90%;
+    margin-bottom: 5%;
+  }
+  .information-container {
+    width: 90%;
+    margin-bottom: 10%;
+  }
+  .connection-container img {
+    width: 100px;
+  }
+  .connection-container a {
+    width: 50px;
+  }
+}
